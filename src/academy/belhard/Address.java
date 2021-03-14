@@ -40,4 +40,21 @@ public class Address {
     public int getApartment_number() { return apartment_number; }
 
     public void setApartment_number(int apartment_number) { this.apartment_number = apartment_number; }
+
+    @Override
+    public String toString() {
+        return "Address{" +
+                "id=" + id +
+                ", city='" + city + '\'' +
+                ", street='" + street + '\'' +
+                ", house_number=" + house_number +
+                ", house_building=" + house_building +
+                ", apartment_number=" + apartment_number +
+                '}';
+    }
+
+
+    public static Address createToSaving(String city, String street, int house_number, Integer house_building, Integer apartment_number) {
+        return new Address(-1, city, street, house_number, house_building, apartment_number);
+    }
 }
